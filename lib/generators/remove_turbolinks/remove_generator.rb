@@ -7,7 +7,7 @@ module RemoveTurbolinks
       end
 
       def remove_from_application_layout
-        gsub_file "app/views/layouts/application.html.erb", /, "data-turbolinks-track" => true/, ""
+        gsub_file "app/views/layouts/application.html.erb", /, ['"]data-turbolinks-track['"] => true/, ""
       end
 
       def remove_from_application_javascript
